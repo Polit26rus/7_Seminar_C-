@@ -52,40 +52,50 @@
 // 8 4 2 4
 // [1,7] -> такого числа в массиве нет
 
-int Prompt(string text){
-    Console.WriteLine(text);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int Prompt(string text){
+//     Console.WriteLine(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-int[,] GetArray2d()
-{
-    int m = Prompt("Введите значение строк: ");
-    int n = Prompt("Введите значение столбцов: ");
-    int[,] array = new int[m, n];
-    for(int i = 0;i < m;i++){
-        for(int j = 0;j < n;j++){
-            array[i, j] = new Random().Next(-10, 10);
-        }
+// int[,] GetArray2d()
+// {
+//     int m = Prompt("Введите значение строк: ");
+//     int n = Prompt("Введите значение столбцов: ");
+//     int[,] array = new int[m, n];
+//     for(int i = 0;i < m;i++){
+//         for(int j = 0;j < n;j++){
+//             array[i, j] = new Random().Next(-10, 10);
+//         }
         
-    }
+//     }
     
-    return array;
-}
+//     return array;
+// }
 
 
-void PrintArray2d(int [,] array2d)
-{
-    for(int i = 0;i < array2d.GetLength(0);i++){
-        for(int j = 0;j < array2d.GetLength(1);j++){
-            Console.Write(array2d[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintArray2d(int [,] array2d)
+// {
+//     for(int i = 0;i < array2d.GetLength(0);i++){
+//         for(int j = 0;j < array2d.GetLength(1);j++){
+//             Console.Write(array2d[i,j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// string ArrayElement(int[,] array,int row, int column){
+//     if(row < array.GetLength(0) && column < array.GetLength(1)){
+//         return $"[{row},{column}] элемент = {array[row,column]}";
+//     }
+//     else return "Такого элемента нет";
+// }
 
 
-int[,] array2d = GetArray2d();
-PrintArray2d(array2d);
+// int[,] array2d = GetArray2d();
+// PrintArray2d(array2d);
+// int r = Prompt("Какая строка ");
+// int k = Prompt("Какой столбец ");
+// Console.WriteLine(ArrayElement(array2d, r , k));
 
 
 
@@ -99,3 +109,50 @@ PrintArray2d(array2d);
 // 5 9 2 3
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+// int Prompt(string text){
+//     Console.WriteLine(text);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[,] GetArray2d()
+// {
+//     int m = Prompt("Введите значение строк: ");
+//     int n = Prompt("Введите значение столбцов: ");
+//     int[,] array = new int[m, n];
+//     for(int i = 0;i < m;i++){
+//         for(int j = 0;j < n;j++){
+//             array[i, j] = new Random().Next(-100, 101);
+//         }
+        
+//     }
+    
+//     return array;
+// }
+// void PrintArray2d(int [,] array2d)
+// {
+//     for(int i = 0;i < array2d.GetLength(0);i++){
+//         for(int j = 0;j < array2d.GetLength(1);j++){
+//             Console.Write(array2d[i,j] + " ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// void AverageOfArrayColumns(int [, ] array)
+// {
+//     for(int i = 0;i < array.GetLength(1);i++){
+//         int count = 0;
+//         for(int j = 0;j < array.GetLength(0);j++){
+//             count += array[j,i];
+//         }
+//         count /= array.GetLength(0);
+//         Console.Write(count + " ");
+//     }
+// }
+
+
+// int[,] array2d = GetArray2d();
+// PrintArray2d(array2d);
+// Console.WriteLine();
+// AverageOfArrayColumns(array2d);
